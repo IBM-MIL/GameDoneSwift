@@ -55,7 +55,7 @@ If you managed to complete these 5 difficult steps (and clicked the simulator sc
 something like the following:
 
 ![hello_world](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/Brand-New-Project/img/hello_world.png)
-The (almost) default SpriteKit game, everyone!
+<center>The (almost) default SpriteKit game, everyone!</center>
 
 Now to test that your app stays in landscape mode rotate the simulator using "command + <-" or "command + ->". 
 
@@ -80,11 +80,11 @@ Now we'll add our own assets.
 ```
 let sprite = SKSpriteNode(imageNamed:"Spaceship")
 ```
-    with:
-    ```
-    let sprite = SKSpriteNode(imageNamed:"unicorn")
-    ```
-    (Really all we did was switch spaceship for unicorn. But that looks a bit better.)
+with:
+```
+let sprite = SKSpriteNode(imageNamed:"unicorn")
+```
+(Really all we did was switch spaceship for unicorn. But that looks a bit better.)
 5. Run the app again to start spawning unicorns.
 
 ### Moving Forward
