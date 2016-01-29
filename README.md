@@ -55,6 +55,7 @@ inspector. You should now edit your attributes so that they match the following:
 ![background_attributes](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/Reticulating-Splines/img/background_attributes.png)
 
 The major changes here are mostly to the size, location, name, and texture. They are:
+
 1. Set the Name to "background" (XCode should attempt to autocomplete this for you.). Setting the name will allow us to find 
 it in *GameScene.swift* later.
 2. Change the Texture to "background". This will make it look like pretty clouds.
