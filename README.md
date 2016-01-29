@@ -8,3 +8,5 @@ empty project yourself. We just have it here for convenience.
 
 ### Lets Get Started
 
+![starting_files](https://raw.github.com/IBM-MIL/GameDoneSwift/branch/Brand-New-Project/img/starting_files.png)
+
