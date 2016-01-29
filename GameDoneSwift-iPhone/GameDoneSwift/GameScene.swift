@@ -25,7 +25,7 @@ class GameScene: SKScene {
         for touch in touches {
             let location = touch.locationInNode(self)
             
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
+            let sprite = SKSpriteNode(imageNamed:"unicorn")
             
             sprite.xScale = 0.5
             sprite.yScale = 0.5
