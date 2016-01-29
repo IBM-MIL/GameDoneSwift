@@ -40,7 +40,7 @@ Now that we're familiar with our project structure lets clean it up and get some
 
 ### Cleaning Up
 
-*Landscape Orientation*
+#### Landscape Orientation
 
 The first thing we should do is make sure that our app stays in landscape.
 
@@ -55,11 +55,11 @@ If you managed to complete these 5 difficult steps (and clicked the simulator sc
 something like the following:
 
 ![hello_world](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/Brand-New-Project/img/hello_world.png)
-<center>The (almost) default SpriteKit game, everyone!</center>
+The (almost) default SpriteKit game, everyone!
 
 Now to test that your app stays in landscape mode rotate the simulator using "command + <-" or "command + ->". 
 
-*Asset Swap*
+#### Asset Swap
 
 I hope you didn't get too attached to that spaceship because now we're going to get rid of it and replace it with
 a unicorn.
@@ -77,14 +77,15 @@ Now we'll add our own assets.
 2. Click and drag both "background.png" and "unicorn.png" into the asset browser.
 3. Select "GameScene.swift" in your project browser.
 4. Replace the following code:
-```
+```swift
 let sprite = SKSpriteNode(imageNamed:"Spaceship")
 ```
 with:
-```
+```swift
 let sprite = SKSpriteNode(imageNamed:"unicorn")
 ```
 (Really all we did was switch spaceship for unicorn. But that looks a bit better.)
+
 5. Run the app again to start spawning unicorns.
 
 ### Moving Forward
