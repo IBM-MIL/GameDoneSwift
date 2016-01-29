@@ -86,7 +86,7 @@ let sprite = SKSpriteNode(imageNamed:"unicorn")
 ```
 (Really all we did was switch spaceship for unicorn. But that looks a bit better.)
 
-5. Run the app again to start spawning unicorns.
+\5. Run the app again to start spawning unicorns.
 
 ### Moving Forward
 
