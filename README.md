@@ -43,12 +43,11 @@ Now that we're familiar with our project structure lets clean it up and get some
 *Landscape Orientation*
 
 The first thing we should do is make sure that our app stays in landscape.
+
 1. Select the project in your project browser. This is what is highlighted blue in the screen shot above.
 2. Make sure you are on the "General" tab.
 3. Look for these checkboxes underneath "Deployment Info".
-
-    ![device_orientation](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/Brand-New-Project/img/device_orientation.png)
-
+![device_orientation](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/Brand-New-Project/img/device_orientation.png)
 4. Uncheck "Portrait". (And "Upside Down" if for some reason that is checked. Hint: It shouldn't be.)
 5. Click the Run button. (Or press "command + r")
 
@@ -56,10 +55,9 @@ If you managed to complete these 5 difficult steps (and clicked the simulator sc
 something like the following:
 
 ![hello_world](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/Brand-New-Project/img/hello_world.png)
-The (almost) default SpriteKit game everyone.
+The (almost) default SpriteKit game, everyone!
 
-Now to test that your app stays in landscape mode feel free to use "command + <-" or "command + ->" to rotate the 
-simulator. 
+Now to test that your app stays in landscape mode rotate the simulator using "command + <-" or "command + ->". 
 
 *Asset Swap*
 
@@ -67,12 +65,14 @@ I hope you didn't get too attached to that spaceship because now we're going to 
 a unicorn.
 
 First we'll remove the spaceship.
+
 1. Select "Assets.xcassets" in your project browser.
 2. Click "Spaceship" in the asset browser.
 3. Say "Goodbye Spaceship."
 4. Press delete.
 
-Now we'll add our own assets. 
+Now we'll add our own assets.
+
 1. Open a finder window and navigate to the "assets" directory in this repo.
 2. Click and drag both "background.png" and "unicorn.png" into the asset browser.
 3. Select "GameScene.swift" in your project browser.
