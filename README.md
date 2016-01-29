@@ -7,4 +7,4 @@ It just takes a few mouse clicks. You really don't even need to clone this branc
 empty project yourself. We just have it here for convenience.
 
 ### Lets Get Started
-So the first thing we're going to do is clean up the project a bit.
+
