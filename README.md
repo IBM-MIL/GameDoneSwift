@@ -60,7 +60,7 @@ different physics bit masks we plan to use.
 4. Choose a location to save the file and finish creating it.
 5. Open up your newly created class and add the following right in the class definition.
 
-```
+```swift
 static let player: UInt32 = 0x1 << 0
 static let ground: UInt32 = 0x1 << 1
 ```
@@ -76,7 +76,7 @@ So now that we have some defined bit masks lets tie them to our sprites.
 1. Open `GameScene.swift`.
 2. Add the following function to the class.
 
-```
+```swift
 func setPhysicsBitMasks() {
     /* Sets up the SKSpriteNode bit masks so they can interact in the physics engine */
         
@@ -96,7 +96,7 @@ what types of objects they should check for collisions with. Next we'll set up h
 
 First add the following to the bottom of `didMoveToView`.
 
-```
+```swift
 setPhysicsBitMasks()
 self.physicsWorld.contactDelegate = self
 ```
@@ -106,7 +106,7 @@ the delegate to be called whenever contact occurs. So we should probably make su
 
 At the very bottom of `GameScene.swift` we're going to add an extension to the class. It looks like this:
 
-```
+```swift
 extension GameScene: SKPhysicsContactDelegate {
     
     func didBeginContact(contact: SKPhysicsContact) {
@@ -128,7 +128,7 @@ jump. We'll accomplish this by applying an impulse in the Y direction to his phy
 
 In `GameScene.swift`, add the following function:
 
-```
+```swift
 func jump() {
     /* Applies a y velocity to the player character */
         
@@ -142,7 +142,7 @@ to King's physics body that moves him 200 in the X direction and 1000 in the Y d
 
 To start the jump add `jump()` to the `touchesBegan` function so it looks like this:
 
-```
+```swift
 override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
     /* Called when a touch begins */
         
@@ -156,13 +156,13 @@ to make sure he is on the ground. So let's add that.
 
 For starters add another global class variable called `onGround` like so:
 
-```
+```swift
 var onGround = true
 ```
 
 Then inside the `didBeginContact` function add `onGround = true` so it looks like this:
 
-```
+```swift
 func didBeginContact(contact: SKPhysicsContact) {
     /* Fires when contact is made between two physics bodies with collision bit masks */
         
@@ -176,7 +176,7 @@ because we only have two sprites that can collide we can get away with it.
 
 Finally we modify the `jump` function to check if the player is on the ground:
 
-```
+```swift
 func jump() {
     /* Applies a y velocity to the player character */
         
@@ -199,7 +199,7 @@ end of every update cycle.
 
 First add a `movePlayer` function that just applies an X velocity change like so:
 
-```
+```swift
 func movePlayer() {
     /* Sets the x velocity of the player character */
         
@@ -210,7 +210,7 @@ func movePlayer() {
 
 Then add and override the `didFinishUpdate` function and call the `movePlayer` player function inside of it.  
 
-```
+```swift
 override func didFinishUpdate() {
     /* Called after each update */
         
