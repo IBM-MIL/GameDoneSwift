@@ -11,14 +11,17 @@ Let's jump right in and create a camera.
 
 1. Open `GameScene.sks`
 2. Find the Camera object in the object library.
+
 ![camera_object](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/As-The-World-Turns/img/camera_object.png)
 3. Drag the camera object onto the scene.
 4. Set the camera's properties as follows:
+
 ![camera_properties](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/As-The-World-Turns/img/camera_properties.png)
 5. *Name* is set to "camera".
 6. *Position* is "X: 667 Y: 375".
 7. Click outside the yellow-orange camera rectangle to select the scene.
 8. Set the scene *Camera* to camera. This allows us to access it later.
+
 ![scene_camera](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/As-The-World-Turns/img/scene_camera.png)
 
 Now that we have a camera in our scene we need to make sure it follows King. So first we'll need
