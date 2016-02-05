@@ -13,7 +13,7 @@ adding a physics body to the ground sprite.
 1. Open up `GameScene.sks`.
 2. Select the ground. It's the big green (or other brightly colored) rectangle at the bottom of the scene.
 3. In the properties inspector scroll to the bottom where you'll find *Physics Definition*.
-4. Make it look like this:
+4. Make it look like this (the numbers aren't important):
 
 ![ground_body](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/Lets-Get-Physical/img/ground.png)
 
@@ -32,7 +32,8 @@ Everything else can stay whatever the default values are. We'll be setting the M
 Now that we have some solid ground to stand on we can give King a body.
 
 1. In `GameScene.sks` select the King sprite.
-2. Just like with the gound modify the *Physics Definition* to look like this:
+2. Just like with the gound modify the *Physics Definition* to look like this (as before the numbers aren't 
+important):
 
 ![king_body](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/Lets-Get-Physical/img/king.png)
 
@@ -53,7 +54,7 @@ different physics bit masks we plan to use.
 
 1. Right (CMD) click, the project directory and select "New File..."
 ![new_file](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/Lets-Get-Physical/img/new_file.png)
-2. Make sure that "Source" is selected under "tvOS". The select "Cocoa Touch Class" and click "Next".
+2. Make sure that "Source" is selected under "iOS". The select "Cocoa Touch Class" and click "Next".
 ![template](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/Lets-Get-Physical/img/template.png)
 3. Set the class name to "PhysicsBitMasks" and make it a subclass of "NSObject" then click "Next".
 ![name](https://raw.githubusercontent.com/IBM-MIL/GameDoneSwift/Lets-Get-Physical/img/file_name.png)
