@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81A037A91C652FA100886024 /* PhysicsBitMasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A037A81C652FA100886024 /* PhysicsBitMasks.swift */; };
 		D47C37341C5BC484008221B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C37331C5BC484008221B8 /* AppDelegate.swift */; };
 		D47C37361C5BC484008221B8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D47C37351C5BC484008221B8 /* GameScene.sks */; };
 		D47C37381C5BC484008221B8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C37371C5BC484008221B8 /* GameScene.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81A037A81C652FA100886024 /* PhysicsBitMasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhysicsBitMasks.swift; path = GameDoneSwift/PhysicsBitMasks.swift; sourceTree = "<group>"; };
 		D47C37301C5BC484008221B8 /* GameDoneSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameDoneSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C37331C5BC484008221B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D47C37351C5BC484008221B8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		D47C37271C5BC484008221B8 = {
 			isa = PBXGroup;
 			children = (
+				81A037A81C652FA100886024 /* PhysicsBitMasks.swift */,
 				D47C37321C5BC484008221B8 /* GameDoneSwift */,
 				D47C37311C5BC484008221B8 /* Products */,
 			);
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D47C37381C5BC484008221B8 /* GameScene.swift in Sources */,
+				81A037A91C652FA100886024 /* PhysicsBitMasks.swift in Sources */,
 				D47C373A1C5BC484008221B8 /* GameViewController.swift in Sources */,
 				D47C37341C5BC484008221B8 /* AppDelegate.swift in Sources */,
 			);
@@ -292,6 +296,7 @@
 				D47C37481C5BC484008221B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
