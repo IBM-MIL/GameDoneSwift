@@ -121,10 +121,11 @@ Time to head back over to `GameScene.swift`. Add the following code snippet insi
 if king.position.y < -200 {
     gameOver()
 }
+score++
 ```
 
-This handy code snippet will trigger the `gameOver` function when King falls below the screen. Let's
-write that function now. Add the following code the the `GameScene` class:
+This handy code snippet will increment the score and trigger the `gameOver` function when King falls 
+below the screen. Let's write that function now. Add the following code the the `GameScene` class:
 
 ```swift
 func gameOver() {
