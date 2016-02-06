@@ -166,6 +166,7 @@ func reset() {
         
     platforms = []
     backgrounds = []
+    backgrounds.append(background)
     addNextBG()
         
     score = 0
