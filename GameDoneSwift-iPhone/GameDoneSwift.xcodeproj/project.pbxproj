@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		81A037A91C652FA100886024 /* PhysicsBitMasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A037A81C652FA100886024 /* PhysicsBitMasks.swift */; };
+		81A037AB1C65795500886024 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A037AA1C65795500886024 /* AVFoundation.framework */; };
+		81A037AD1C65797C00886024 /* sickBeats.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81A037AC1C65797C00886024 /* sickBeats.mp3 */; };
 		D47C37341C5BC484008221B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C37331C5BC484008221B8 /* AppDelegate.swift */; };
 		D47C37361C5BC484008221B8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D47C37351C5BC484008221B8 /* GameScene.sks */; };
 		D47C37381C5BC484008221B8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C37371C5BC484008221B8 /* GameScene.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		81A037A81C652FA100886024 /* PhysicsBitMasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhysicsBitMasks.swift; path = GameDoneSwift/PhysicsBitMasks.swift; sourceTree = "<group>"; };
+		81A037AA1C65795500886024 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		81A037AC1C65797C00886024 /* sickBeats.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sickBeats.mp3; sourceTree = "<group>"; };
 		D47C37301C5BC484008221B8 /* GameDoneSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameDoneSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C37331C5BC484008221B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D47C37351C5BC484008221B8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A037AB1C65795500886024 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,7 @@
 		D47C37271C5BC484008221B8 = {
 			isa = PBXGroup;
 			children = (
+				81A037AA1C65795500886024 /* AVFoundation.framework */,
 				81A037A81C652FA100886024 /* PhysicsBitMasks.swift */,
 				D47C37321C5BC484008221B8 /* GameDoneSwift */,
 				D47C37311C5BC484008221B8 /* Products */,
@@ -61,6 +67,7 @@
 		D47C37321C5BC484008221B8 /* GameDoneSwift */ = {
 			isa = PBXGroup;
 			children = (
+				81A037AC1C65797C00886024 /* sickBeats.mp3 */,
 				D47C37331C5BC484008221B8 /* AppDelegate.swift */,
 				D47C37351C5BC484008221B8 /* GameScene.sks */,
 				D47C37371C5BC484008221B8 /* GameScene.swift */,
@@ -132,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D47C37361C5BC484008221B8 /* GameScene.sks in Resources */,
+				81A037AD1C65797C00886024 /* sickBeats.mp3 in Resources */,
 				D47C37421C5BC484008221B8 /* LaunchScreen.storyboard in Resources */,
 				D47C373F1C5BC484008221B8 /* Assets.xcassets in Resources */,
 				D47C373D1C5BC484008221B8 /* Main.storyboard in Resources */,

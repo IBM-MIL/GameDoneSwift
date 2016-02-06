@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import AVFoundation
 
 class GameScene: SKScene {
     
@@ -40,6 +41,11 @@ class GameScene: SKScene {
     let platformTime: CFTimeInterval = 0.5
     var platformTimeCount: CFTimeInterval = 0
     
+    var player: AVAudioPlayer!
+    
+    var sceneController: GameViewController!
+    var score = 0
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         guard let king = self.childNodeWithName(kingSpriteName) as? SKSpriteNode,
@@ -59,6 +65,15 @@ class GameScene: SKScene {
         
         backgrounds.append(self.background)
         addNextBG()
+        
+        do {
+            let sickBeats = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("sickBeats", ofType: "mp3")!)
+            player = try AVAudioPlayer(contentsOfURL: sickBeats)
+            player.numberOfLoops = -1
+            player.play()
+        } catch {
+            print("Failed to load audio.")
+        }
 
     }
     
@@ -91,7 +106,43 @@ class GameScene: SKScene {
         /* Called after each update */
         
         movePlayer()
+        if king.position.y < -200 {
+            gameOver()
+        }
+        score++
+    }
+    
+    func gameOver() {
+        self.paused = true
+        presentScore()
+    }
+    
+    func presentScore() {
+        let alert = UIAlertController(title: "Game Over!", message:"Your final score was \(score).", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Try Again!", style: .Default) { _ in
+            self.reset()
+            })
+        sceneController.presentViewController(alert, animated: true){}
         
+    }
+    
+    func reset() {
+        self.removeAllChildren()
+        self.addChild(background)
+        self.addChild(ground)
+        self.addChild(king)
+        
+        self.king.position = CGPoint(x: 200, y: 220)
+        moveCameraWith(king, offset: 350)
+        
+        platforms = []
+        backgrounds = []
+        backgrounds.append(background)
+        addNextBG()
+        
+        score = 0
+        
+        self.paused = false
     }
     
     func setPhysicsBitMasks() {
