@@ -46,11 +46,11 @@ class GameScene: SKScene {
     var sceneController: GameViewController!
     var score = 0
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         /* Setup your scene here */
-        guard let king = self.childNodeWithName(kingSpriteName) as? SKSpriteNode,
-            let ground = self.childNodeWithName(groundSpriteName) as? SKSpriteNode,
-            let background = self.childNodeWithName(backgroundSpriteName) as? SKSpriteNode
+        guard let king = self.childNode(withName: kingSpriteName) as? SKSpriteNode,
+            let ground = self.childNode(withName: groundSpriteName) as? SKSpriteNode,
+            let background = self.childNode(withName: backgroundSpriteName) as? SKSpriteNode
             else {
                 print("Sprites not found.")
                 return
@@ -67,8 +67,8 @@ class GameScene: SKScene {
         addNextBG()
         
         do {
-            let sickBeats = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("sickBeats", ofType: "mp3")!)
-            player = try AVAudioPlayer(contentsOfURL: sickBeats)
+            let sickBeats = URL(fileURLWithPath: Bundle.main.path(forResource: "sickBeats", ofType: "mp3")!)
+            player = try AVAudioPlayer(contentsOf: sickBeats)
             player.numberOfLoops = -1
             player.play()
         } catch {
@@ -77,12 +77,12 @@ class GameScene: SKScene {
 
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         jump()
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
         platformTimeCount += currentTime - previousTime
         
@@ -109,20 +109,20 @@ class GameScene: SKScene {
         if king.position.y < -200 {
             gameOver()
         }
-        score++
+        score += 1
     }
     
     func gameOver() {
-        self.paused = true
+        self.isPaused = true
         presentScore()
     }
     
     func presentScore() {
-        let alert = UIAlertController(title: "Game Over!", message:"Your final score was \(score).", preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Try Again!", style: .Default) { _ in
+        let alert = UIAlertController(title: "Game Over!", message:"Your final score was \(score).", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Try Again!", style: .default) { _ in
             self.reset()
             })
-        sceneController.presentViewController(alert, animated: true){}
+        sceneController.present(alert, animated: true){}
         
     }
     
@@ -142,7 +142,7 @@ class GameScene: SKScene {
         
         score = 0
         
-        self.paused = false
+        self.isPaused = false
     }
     
     func setPhysicsBitMasks() {
@@ -176,7 +176,7 @@ class GameScene: SKScene {
         
     }
     
-    func moveCameraWith(node: SKNode, offset: CGFloat) {
+    func moveCameraWith(_ node: SKNode, offset: CGFloat) {
         /* Moves the camera along the x-axis with a specified node and offset */
         
         guard let camera = self.camera else {
@@ -205,7 +205,7 @@ class GameScene: SKScene {
         
     }
     
-    func platformWithRect(rect: CGRect) -> SKShapeNode {
+    func platformWithRect(_ rect: CGRect) -> SKShapeNode {
         /* Create a new platform node and its physics body. */
         
         let platform = SKShapeNode(rect: rect)
@@ -213,11 +213,11 @@ class GameScene: SKScene {
         platform.fillColor = UIColor(red: 206/256, green: 229/256, blue: 139/256, alpha: 1.0)
         platform.zPosition = 1
         
-        let center = CGPointMake(platform.frame.origin.x + platform.frame.width/2, platform.frame.origin.y + platform.frame.height/2)
-        platform.physicsBody = SKPhysicsBody(rectangleOfSize: rect.size, center: center)
+        let center = CGPoint(x: platform.frame.origin.x + platform.frame.width/2, y: platform.frame.origin.y + platform.frame.height/2)
+        platform.physicsBody = SKPhysicsBody(rectangleOf: rect.size, center: center)
         platform.physicsBody?.affectedByGravity = false
         platform.physicsBody?.allowsRotation = false
-        platform.physicsBody?.dynamic = false
+        platform.physicsBody?.isDynamic = false
         platform.physicsBody?.pinned = true
         platform.physicsBody?.categoryBitMask = PhysicsBitMasks.ground
         platform.physicsBody?.collisionBitMask = PhysicsBitMasks.player
@@ -256,7 +256,7 @@ class GameScene: SKScene {
 
 extension GameScene: SKPhysicsContactDelegate {
     
-    func didBeginContact(contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact) {
         /* Fires when contact is made between two physics bodies with collision bit masks */
         onGround = true
 
